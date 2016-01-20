@@ -2,6 +2,7 @@
 
 ## Test Case ID ex: Test Case 1.1
 
+* Test suite:
 * Test priority:
 * Module name:
 * Test title:
