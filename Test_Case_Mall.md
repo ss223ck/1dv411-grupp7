@@ -10,7 +10,8 @@
 * Test Designed By:
 * Test Designed Date:
 * Test Executed By:
-* Test Execution Date;
+* Test Execution Date:
+* Test Execution Output: succeded/failed
 
 #### Preconditions
 
