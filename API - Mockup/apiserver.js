@@ -49,6 +49,17 @@ app.post('/getUser', function(req, res) {
         
   });
 })
+
+app.post('/webhook', function(req, res) {
+    //console.log(data.body);
+    var bodyStr = '';
+    //console.log(chunk)
+    req.on("data",function(chunk){
+        bodyStr += chunk.toString();
+        var data = bodyStr;
+        console.log(data)
+          });
+})
 app.get('/getAllUser', function(req, res) {
     
       res.sendFile(__dirname + '/test.html');
