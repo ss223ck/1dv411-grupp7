@@ -1,0 +1,50 @@
+[
+  {
+      "city": "Kalmar",
+      "created": "2015-08-27T12:41:36.251Z",
+      "firstname": "Johan",
+      "lastname": "Leitet",
+      "program": "staff",
+      "services": {
+          "github": "Leitet"
+      },
+      "studentType": "campus",
+      "username": "tstjo"
+  },
+  {
+      "city": "Kalmar",
+      "created": "2015-08-27T12:47:56.042Z",
+      "firstname": "John",
+      "lastname": "Häggerud",
+      "program": "staff",
+      "services": {
+          "github": "thajo"
+      },
+      "studentType": "campus",
+      "username": "thajo"
+  },
+  {
+      "created": "2015-08-27T13:33:33.607Z",
+      "username": "mats",
+      "firstname": "Mats",
+      "lastname": "Loock",
+      "studentType": "campus",
+      "program": "staff",
+      "city": "Kalmar",
+      "services": {
+          "github": "mtslck"
+      }
+  },
+  {
+      "created": "2015-08-27T15:42:03.366Z",
+      "username": "xx222xx",
+      "firstname": "Harry",
+      "lastname": "Potter",
+      "studentType": "distance",
+      "program": "WP2015",
+      "city": "London",
+      "services": {
+          "github": "harry_potter_fake"
+      }
+  }
+]
