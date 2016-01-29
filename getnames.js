@@ -1,6 +1,5 @@
 "use strict";
 const names = {
-    
     init:function(object){
         names.getnames(object); 
     },
