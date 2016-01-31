@@ -1,0 +1,84 @@
+{
+  "organization": "1dv023",
+  "repos" : [
+    {
+      "name": "Examination assignment 1",
+      "nameFormat": "{username}-examination-1",
+      "description": "Examination assignment 1 for {firstname} {lastname}, {class}",
+      "check": {
+        "jshint": {
+          "ignore": ["app/build", "app/dist"]
+        },
+        "required": ["app.js", "README.md"]
+      },
+      "milestones": [
+        {
+          "name" :    "Ordinarie examination",
+          "deadline": "2015-12-12"
+        },
+        {
+          "name" :    "Omexamination 1",
+          "deadline": "2016-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Examination assignment 2",
+      "nameFormat": "{username}-examination-2",
+      "description": "Examination assignment 2 for {firstname} {lastname}, {class}",
+      "check": {
+        "jshint": {
+          "ignore": ["app/build", "app/dist"]
+        },
+        "required": ["app.js", "README.md"]
+      },
+      "milestones": [
+        {
+          "name" :    "Ordinarie examination",
+          "deadline": "2015-12-12"
+        },
+        {
+          "name" :    "Omexamination 1",
+          "deadline": "2016-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Examination assignment 3",
+      "nameFormat": "{username}-examination-3",
+      "description": "Examination assignment 3 for {firstname} {lastname}, {class}",
+      "check": {
+        "jshint": {
+          "ignore": ["app/build", "app/dist"]
+        },
+        "required": ["app.js", "README.md"]
+      },
+      "milestones": [
+        {
+          "name" :    "Ordinarie examination",
+          "deadline": "2015-12-12"
+        },
+        {
+          "name" :    "Omexamination 1",
+          "deadline": "2016-01-12"
+        }
+      ]
+    },
+    {
+      "name": "Exercise-promising-web-scraper",
+      "nameFormat": "{username}-exercise-promising-web-scraper",
+      "description": "Exercise assignments for {firstname} {lastname}, {class}"
+    },
+    {
+      "name": "Exercise-rotten-tomatoes",
+      "nameFormat": "{username}-rotten-tomatoes",
+      "description": "Exercise assignments for {firstname} {lastname}, {class}"
+    },
+    {
+      "name": "Exercise-event-emitter",
+      "nameFormat": "{username}-event-emitter",
+      "description": "Exercise assignments for {firstname} {lastname}, {class}"
+    }
+  ]
+}
+
