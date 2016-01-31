@@ -1,0 +1,19 @@
+{
+  "name": "api-kursmall",
+  "version": "1.0.0",
+  "description": "API for getting templates for GitHub repos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hj222hi/1dv411-grupp7.git"
+  },
+  "author": "dt222cc, nj222dt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hj222hi/1dv411-grupp7/issues"
+  },
+  "homepage": "https://github.com/hj222hi/1dv411-grupp7#readme"
+}
