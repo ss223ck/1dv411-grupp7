@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% include templates/header.ejs%>
+    <p>Welcome to <%= title %></p>
+    <h2>Favorite games</h2>
+    <ul>
+      <%for(var i = 0; i < favGames.games.length; i++){%>
+        <li>
+          <%= favGames.games[i]%>
+        </li>
+      <%}%>
+    </ul>
+    <form action="" method="post">
+      <label for="text">Text: </label>
+      <input type="text" id="text" name="text"><br>
+      <button type="submit">Submit</button>
+    </form>
+    <% if(!login){%>
+      <a href='https://github.com/login/oauth/authorize?client_id=8ae725a1e54564903204&scope=repo'>Connect to github</a>
+    <%}
+    else if(!listMode){%>
+      <h3>List your repos</h3>
+      <a href='?list=1'>List your repos</a>
+    </form>
+      <a href='?logout="1"'>Logout</a><br>
+    <%}
+    else if (listMode){%>
+      <h2>Repos</h2>
+      <ul>
+        <%for(var i = 0; i < repos.length; i++){%>
+          <li>
+            <a href='<%= repos[i].url %>'><%= repos[i].name %></a>
+          </li>
+        <%}%>
+      </ul>
+      <a href='?logout="1"'>Logout</a><br>
+    <%}%>
+  </body>
+</html>

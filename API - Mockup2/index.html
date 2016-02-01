@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <main>
+        <div>
+            <p>Detta är en test sida för att simulera en request via vår sida till en API.</p>
+            <p>Resultatet som vi får från API:et visas i konsolen, om man använder sig av hämta knappen under.</p>
+            <p>Vi frågar efter användarnas GitHub användarnamn via anrop med t.ex lnu användarnamn.</p>
+        </div>
+        <div>
+            <p>
+                Exempel på GET requests istället för POST
+            </p>
+            <ul>
+                <li>
+                    http://localhost:5000/users/
+                </li>
+                <li>
+                    http://localhost:5000/users/tstjo
+                </li>
+                <li>
+                    http://localhost:5000/users/tstjo+xx222xx
+                </li>
+            </ul>
+        </div>
+        <div>
+            <select id="selector" title="username">
+                <option value="All">All</option>
+                <option value="thajo">John Häggerud</option>
+                <option value="tstjo">Johan Leitet</option>
+                <option value="mats">Mats Loock</option>
+                <option value="xx222xx">Harry Potter</option>
+                <option value="thajo+mats+tstjo">John, Mats och Johan</option>
+            </select>
+            <input type="button" id="button" value="hämta"/>
+        </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
