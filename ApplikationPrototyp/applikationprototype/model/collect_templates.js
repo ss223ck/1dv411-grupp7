@@ -2,13 +2,15 @@
 const request = require("request");
 const Collect_Templates = {
     produceTemplates:function(usernameAPIresponse,templateAPIurl){
-        request("../resources/UsernameAPIresponse.json", function (error, response, body) {
+        /*request("../resources/UsernameAPIresponse.json", function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 var response = JSON.parse(body);
                 Collect_Templates.modifyTemplates(response, usernameAPIresponse, templateAPIurl);
             }
-        });
-
+        });*/
+        //Demo version below
+        const userNames = require("../resources/UsernameAPIresponse.json");
+        Collect_Templates.modifyTemplates(userNames, usernameAPIresponse, templateAPIurl);
     },
     modifyTemplates:function(templateResponse,usernameAPIresponse,orgNumber){
         const templateForm = templateResponse;
@@ -25,7 +27,6 @@ const Collect_Templates = {
             completeTemplate = templateForm;
             displayArray.push(completeTemplate);
         }
-        console.log(displayArray);
     }
     
 };

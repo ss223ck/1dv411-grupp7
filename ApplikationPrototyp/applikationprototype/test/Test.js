@@ -50,16 +50,28 @@ describe('Test Suite express and middleware', function() {
 
     describe('Model', function() {
         it('Test collect_usernames is not null and is defined', function (  ) {
-            const collect = require('../model/collect_usernames.js');
+            const collect_usernames = require('../model/collect_usernames.js');
 
-            chai_assert.isNotNull(collect);
-            chai_assert.isDefined(collect);
+            chai_assert.isNotNull(collect_usernames);
+            chai_assert.isDefined(collect_usernames);
         });
-        it('Test collect_usernames is not null and is defined', function (  ) {
-            const collect = require('../model/collect_usernames.js');
+        it('Test collect_templates is not null and is defined', function (  ) {
+            const collect_templates = require('../model/collect_templates.js');
 
-            chai_assert.isNotNull(collect);
-            chai_assert.isDefined(collect);
+            chai_assert.isNotNull(collect_templates);
+            chai_assert.isDefined(collect_templates);
+        });
+        it("Test collect_usernames can format url for courspress-api", function () {
+            const collect = require('../model/collect_usernames.js');
+            const names = require("../resources/NamesOfCourseAttendant");
+
+            chai_assert.strictEqual(collect.produceUrl(JSON.stringify(names)), "users/Kalle+Olle+Magnus");
+        });
+        it("Test handle_application is not null and is defined", function(){
+            const handle_application = require('../model/handle_application.js');
+
+            chai_assert.isNotNull(handle_application);
+            chai_assert.isDefined(handle_application);
         });
     });
 });
