@@ -8,6 +8,7 @@ const Collect_Usernames = {
         var usernameAPIurl = "users/";
         for(var i = 0; i < courseNames.usernames.length; i++){
             usernameAPIurl += courseNames.usernames[i]["username"];
+            //At the last format do not add a plus mark at the end of the url
             if(i+1 != courseNames.usernames.length )
             {
                 usernameAPIurl += "+";
@@ -16,13 +17,16 @@ const Collect_Usernames = {
         return usernameAPIurl;
         //Collect_Usernames.gatherUsernamesFromUrl(usernameAPIurl, templateAPIurl);
     },
-    gatherUsernamesFromUrl:function(usernameAPIurl,templateAPIurl){
+    gatherUsernamesFromUrl:function(usernameAPIurl){
         //makes the request towards api. in real life
 
-        /*request("../resources/UsernameAPIresponse.json", function (error, response, body) {
+        /*request("usernameAPIurl", function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                var response = JSON.parse(body);
-                Collect_Usernames.Next(response, templateAPIurl);
+                return body;
+            }
+            else
+            {
+                throw new Error("Something went wrong when fetching data from API");
             }
         });*/
         //the url should be the url that we send as a args but in this case we mock with a json file
@@ -30,13 +34,14 @@ const Collect_Usernames = {
 
 
         var myvar = require("../resources/UsernameAPIresponse.json");
-        Collect_Usernames.Next(myvar, templateAPIurl);
+        return JSON.stringify(myvar);
+        //Collect_Usernames.Next(myvar, templateAPIurl);
         //For demo version^
-    },
+    }/*,
     Next:function(response,templateAPIurl){
         const collect_template = require("collect_templates");
 
         collect_template.produceTemplates(response,templateAPIurl);
-    }
+    }*/
 };
 module.exports = Collect_Usernames;

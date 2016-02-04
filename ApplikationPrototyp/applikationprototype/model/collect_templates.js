@@ -1,16 +1,20 @@
 "use strict";
 const request = require("request");
 const Collect_Templates = {
-    produceTemplates:function(usernameAPIresponse,templateAPIurl){
-        /*request("../resources/UsernameAPIresponse.json", function (error, response, body) {
+    produceTemplates:function(usernameAPIresponse){
+        //Must check if url is correct format or the applikation will crash
+        /*request("usernameAPIresponse", function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                var response = JSON.parse(body);
-                Collect_Templates.modifyTemplates(response, usernameAPIresponse, templateAPIurl);
+                //var response = JSON.parse(body);
+                //Collect_Templates.modifyTemplates(response, usernameAPIresponse, templateAPIurl);
+                return body;
             }
         });*/
         //Demo version below
         const userNames = require("../resources/UsernameAPIresponse.json");
-        Collect_Templates.modifyTemplates(userNames, usernameAPIresponse, templateAPIurl);
+        return JSON.stringify(userNames);
+
+        //Collect_Templates.modifyTemplates(userNames, usernameAPIresponse, templateAPIurl);
     },
     modifyTemplates:function(templateResponse,usernameAPIresponse,orgNumber){
         const templateForm = templateResponse;

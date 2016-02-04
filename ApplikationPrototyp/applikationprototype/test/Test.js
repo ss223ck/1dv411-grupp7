@@ -61,7 +61,13 @@ describe('Test Suite express and middleware', function() {
             chai_assert.isNotNull(collect_templates);
             chai_assert.isDefined(collect_templates);
         });
-        it("Test collect_usernames can format url for courspress-api", function () {
+        it("Test collect_usernames: produceUrl", function () {
+            const collect = require('../model/collect_usernames.js');
+            const names = require("../resources/NamesOfCourseAttendant");
+
+            chai_assert.strictEqual(collect.produceUrl(JSON.stringify(names)), "users/Kalle+Olle+Magnus");
+        });
+        it("Test collect_usernames: gatherUsernamesFromUrl", function () {
             const collect = require('../model/collect_usernames.js');
             const names = require("../resources/NamesOfCourseAttendant");
 
