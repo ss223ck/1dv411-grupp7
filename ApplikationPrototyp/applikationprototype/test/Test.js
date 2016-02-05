@@ -73,6 +73,16 @@ describe('Test Suite express and middleware', function() {
 
             chai_assert.strictEqual(collect.produceUrl(JSON.stringify(names)), "users/Kalle+Olle+Magnus");
         });
+        it("Test collect_templates: modifyTemplates", function () {
+            const collect_usernames = require('../model/collect_usernames.js');
+            const collect_templates = require('../model/collect_templates.js');
+            const names = require("../resources/NamesOfCourseAttendant");
+
+            var url = collect_usernames.produceUrl(names);
+            var usernames = collect_usernames.gatherUsernamesFromUrl(url);
+
+            var
+        });
         it("Test handle_application is not null and is defined", function(){
             const handle_application = require('../model/handle_application.js');
 

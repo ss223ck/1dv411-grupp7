@@ -1,9 +1,10 @@
 "use strict";
 const request = require("request");
 const Collect_Templates = {
-    produceTemplates:function(usernameAPIresponse){
+    produceTemplates: function(templateAPIurl) {
         //Must check if url is correct format or the applikation will crash
-        /*request("usernameAPIresponse", function (error, response, body) {
+        //http://apinam/templateAPIurl
+        /*request("templateAPIurl", function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 //var response = JSON.parse(body);
                 //Collect_Templates.modifyTemplates(response, usernameAPIresponse, templateAPIurl);
@@ -11,12 +12,12 @@ const Collect_Templates = {
             }
         });*/
         //Demo version below
-        const userNames = require("../resources/UsernameAPIresponse.json");
-        return JSON.stringify(userNames);
+        const repoTemplate = require("../resources/TemplateAPIresponse.json");
+        return repoTemplate;
 
         //Collect_Templates.modifyTemplates(userNames, usernameAPIresponse, templateAPIurl);
     },
-    modifyTemplates:function(templateResponse,usernameAPIresponse,orgNumber){
+    modifyTemplates: function(templateResponse, usernameAPIresponse, orgNumber) {
         const templateForm = templateResponse;
         var completeTemplate = {};
         var displayArray = [];
@@ -30,6 +31,7 @@ const Collect_Templates = {
             });
             completeTemplate = templateForm;
             displayArray.push(completeTemplate);
+            return displayArray;
         }
     }
     
